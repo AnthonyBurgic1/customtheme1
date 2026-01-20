@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="<?php language-attributes(); ?>">
+<head>
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php wp_head(); ?>
+    <li rel=stylesheet href="<?php echo esc_url(home_url('/wp-content/themes/customtheme1/style.css')); ?>"> 
+</head>
+<body <?php body_class(); ?>>
+
+<header class="default-header">
+<div>
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+        <img src="" alt=" I will add an image later on">
+    </a>
+</div>
+<nav>
+    <?php
+    // this diplays the mneu you have created in the admin portal \\ 
+        wp_nav_menu( array(
+            'menu'           => 'main',
+            'theme_location' => '',
+            'depth'          => 2,
+            'fallback_cb'    => false 
+        ) );
+    ?>
+</nav>
+</header>
+
